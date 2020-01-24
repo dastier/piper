@@ -4,12 +4,8 @@ desktopdir = join_paths(datadir, 'applications')
 icondir = join_paths(datadir, 'icons', 'hicolor', 'scalable', 'apps')
 metainfodir = join_paths(datadir, 'metainfo')
 
-date = run_command('date', '+%Y')
-
 conf = configuration_data()
 conf.set('version', meson.project_version())
-conf.set('year', date.stdout().strip())
-conf.set('url', 'https://github.com/libratbag/piper')
 conf.set('version_date', version_date)
 
 about_dialog = configure_file(input: 'ui/AboutDialog.ui.in',
@@ -51,7 +47,9 @@ svgs = [
 	'svgs/logitech-g500s.svg',
 	'svgs/logitech-g502.svg',
 	'svgs/logitech-g600.svg',
+	'svgs/logitech-g602.svg',
 	'svgs/logitech-g603.svg',
+	'svgs/logitech-g604.svg',
 	'svgs/logitech-g700.svg',
 	'svgs/logitech-g703.svg',
 	'svgs/logitech-g900.svg',
@@ -59,11 +57,14 @@ svgs = [
 	'svgs/logitech-g-pro-wireless.svg',
 	'svgs/logitech-mx-anywhere2.svg',
 	'svgs/logitech-mx-anywhere2s.svg',
+	'svgs/logitech-mx-ergo.svg',
 	'svgs/logitech-mx-master.svg',
 	'svgs/logitech-mx-master-2s.svg',
 	'svgs/logitech-mx-master-3.svg',
+	'svgs/roccat-kone-pure.svg',
 	'svgs/roccat-kone-xtd.svg',
 	'svgs/steelseries-kinzu-v2.svg',
+	'svgs/steelseries-kinzu-v3.svg',
 	'svgs/steelseries-rival.svg',
 	'svgs/steelseries-rival310.svg',
 	'svgs/steelseries-rival600.svg',
